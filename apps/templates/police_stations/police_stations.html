@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Police stations {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <div class="container-fluid px-4">
+            <h3 class="mt-4">Police Stations</h3>
+           
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                   Manage Police Stations
+                </div>
+                <div class="card-body">
+                    <table id="datatablesSimple">
+                        <thead>
+                            <tr> 
+                                <th>No</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            {% for station in police_stations %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{station.name}}</td>
+                                    <td>{{station.code}}</td>
+                                    <td><a href="/police-stations/edit/{{station.id}}" class="btn btn btn-sm btn-primary"> Update</a> <a href="/police-stations/delete/{{station.id}}" class="btn btn btn-sm btn-danger"> Delete</a></td>
+                                </tr>
+                            {% endfor %}
+                          
+                          
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="/static/assets/js/datatables-simple-demo.js"></script>
+
+{% endblock javascripts %}

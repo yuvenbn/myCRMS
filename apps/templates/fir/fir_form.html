@@ -1,0 +1,130 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}FIR{% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <div class="container-fluid px-4 ">
+            
+            
+            
+            <div class="row justify-content-center">
+               
+                <div class="col-lg-6">
+                    <h3 class="mt-4">FIR</h3>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-page me-1"></i>
+                           
+                            <b> FIR Form</b>
+                        </div>
+                        <div class="row justify-content-center my-3">
+                            <div class="col p-4 mb-3">
+
+                                <form method="post" enctype="multipart/form-data">
+                                   {% csrf_token %}
+                                    <div class="form-group row mt-2 ">
+                                      <label for="inputField" class="col-sm-3 text-right  col-form-label">Police Station<small class="text-danger">*</small></label>
+                                      <div class="col-sm-6">
+                                                <select name="police_station" class="form-select">
+                                                <option>Select station</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                                <!-- Add more options as needed -->
+                                                </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3 text-right  col-form-label">Crime Type<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                                  <select name="police_station" class="form-select">
+                                                  <option>Select station</option>
+                                                  <option>Option 2</option>
+                                                  <option>Option 3</option>
+                                                  <!-- Add more options as needed -->
+                                                  </select>
+                                        </div>
+                                      </div>
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3   col-form-label">Name of accused<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="name_of_accused" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="text-center">Aplicant's Detaild (Victim)</div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3   col-form-label">Name<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="victim_name" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3   col-form-label">Parentage<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="victim_parentage" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3   col-form-label">Contact<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="victim_contact" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Address<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="victim_address" type="email" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Relationship with accused<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="victim_relationship" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Purpose<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input name="purpose" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                      <div class="text-center">
+                                        <button type="submit" class="btn  btn-primary mt-3">Submit</button>
+                                 
+                                      </div>
+                                        
+                                 </form>
+                                    
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted"> </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="/static/assets/demo/chart-area-demo.js"></script>
+    <script src="/static/assets/demo/chart-bar-demo.js"></script>
+    <script src="/static/assets/demo/chart-pie-demo.js"></script>
+
+{% endblock javascripts %}

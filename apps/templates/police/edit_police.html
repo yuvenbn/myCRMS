@@ -1,0 +1,126 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Police  {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <div class="container-fluid px-4 ">
+            
+            
+            
+            <div class="row justify-content-center">
+               
+                <div class="col-lg-6">
+                    <h3 class="mt-4">Police </h3>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-pen me-1"></i>
+                           
+                            <b> Edit Police</b>
+                        </div>
+                        <div class="row justify-content-center my-3">
+                            <div class="col p-4 mb-3">
+
+                                <form method="post" enctype="multipart/form-data">
+                                   {% csrf_token %}
+                                    <div class="form-group row mt-2 ">
+                                      <label for="inputField" class="col-sm-3 text-right  col-form-label">Police Station<small class="text-danger">*</small></label>
+                                      <div class="col-sm-6">
+                                                <select  name="police_station" class="form-select">
+                                                <option value="{{police.police_station}}" >Select station</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                                <!-- Add more options as needed -->
+                                                </select>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3   col-form-label">Police ID<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.policeID}}" name="policeID" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Name<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input value="{{police.first_name}}" name="name" type="text" class="form-control" id="inputField" placeholder="first name" required>
+                                                </div>
+                                                <div class="col">
+                                                    <input value="{{police.last_name}}" name="name" type="text" class="form-control" id="inputField" placeholder="last name" required>
+                                                </div>
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Email<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.email}}" name="email" type="email" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Phone<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.phone_number}}" name="phone_number" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Address<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.address}}" name="address" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Password<small class="text-danger">*</small></label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.password}}" name="password" type="text" class="form-control" id="inputField" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mt-2 ">
+                                        <label for="inputField" class="col-sm-3  text-right col-form-label">Date added</label>
+                                        <div class="col-sm-6">
+                                          <input value="{{police.date_joined}}" name="" type="text" class="form-control" id="inputField" required disabled>
+                                        </div>
+                                    </div>
+                                
+
+                                      <div class="text-center">
+                                        <button type="submit" class="btn  btn-primary mt-3">Update</button>
+                                 
+                                      </div>
+                                        
+                                 </form>
+                                    
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted"> </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="/static/assets/demo/chart-area-demo.js"></script>
+    <script src="/static/assets/demo/chart-bar-demo.js"></script>
+    <script src="/static/assets/demo/chart-pie-demo.js"></script>
+
+{% endblock javascripts %}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body,
+    html {
+      height: 100%;
+    }
+    body{
+    background-color: #dee9ff;
+}
+
+    .card-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .card {
+      width: 18rem;
+      margin: 0.1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.151);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #a4c1fd;
+      margin: 0 auto;
+      margin-top: -40px;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .card-icon i {
+      font-size: rem;
+      color: white;
+    }
+    a h5{
+        text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid h-100">
+    <div class="text-center mt-5">
+        <i><b><h4>myCRMS</h4></b></i>
+    </div>
+    <div class="row h-100 align-items-center">
+       
+      <div class="col-md-4">
+        <a href="">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><b>Admin</b></h5>  
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> <b>Police</b></h5>
+            </div>
+          </div>
+        </div>
+        </a>
+
+      </div>
+      <div class="col-md-4">
+        <a href="">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><b>User</b></h5>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
